@@ -1,0 +1,15 @@
+﻿@page "{rateId:int}"
+@model RateApp.Pages.Rates.DeleteModel
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete!</h2>
+
+<div class="alert alert-danger">
+    Are u sure you want to delete @Model.Rate.Term term?
+</div>
+<form method="post">
+    <button type="submit" class="btn btn-danger"> Yes!</button>
+    <a asp-page="RateList" class=" btn btn-primary"> Cancel</a>
+</form>

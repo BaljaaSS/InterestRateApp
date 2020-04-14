@@ -1,0 +1,29 @@
+﻿@page "{rateId:int?}"
+@model RateApp.Pages.Rates.EditModel
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Editing term @Model.Rate.Term year</h2> 
+
+<form method="post">
+    <input type="hidden" asp-for="Rate.Id" />
+    <div class="form-group">
+        <label asp-for="Rate.Term"></label>
+        <input asp-for="Rate.Term" class="form-control" />
+        <span class="text-danger" asp-validation-for="Rate.Term"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Rate.OneTime"></label>
+        <input asp-for="Rate.OneTime" class="form-control" />
+        <span class="text-danger" asp-validation-for="Rate.OneTime"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Rate.Monthly"></label>
+        <input asp-for="Rate.Monthly" class="form-control" />
+        <span class="text-danger" asp-validation-for="Rate.Monthly"></span>
+    </div>
+    <button type="submit" class="btn btn-primary"> Save!</button>
+    <a asp-page="RateList" class=" btn btn-primary"> Cancel</a>
+</form>
+

@@ -1,0 +1,35 @@
+﻿@page
+@model RateApp.Pages.Rates.RateListModel
+@{
+    ViewData["Title"] = "RateList";
+}
+
+<h1>Rate List</h1>
+
+<table class="table" id="RateTable">
+    <tr style="font-weight:bold">
+        <td>Term</td>
+        <td>One-time</td>
+        <td>Monthly</td>
+        <td>Options</td>
+    </tr>
+    @foreach (var rate in Model.Rates)
+    {
+        <tr class="RateTable">
+            <td >@rate.Term year </td>
+            <td >@rate.OneTime% </td>
+            <td >@rate.Monthly%</td>
+            <td > <a class="btn btn-link" asp-page="./Edit" asp-route-rateId="@rate.Id">
+                  <i class="glyphicon glyphicon-edit"></i></a>
+                  <a class="btn btn-link" asp-page="./Delete" asp-route-rateId="@rate.Id">
+                      <i class="glyphicon glyphicon-trash"></i>
+                  </a>            
+            </td>
+        </tr>
+    }
+</table>
+
+    <a asp-page="./Edit" class="btn btn-primary"> 
+        <i class="glyphicon glyphicon-plus"></i> 
+        Add New
+    </a>
