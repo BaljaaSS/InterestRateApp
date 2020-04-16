@@ -4,7 +4,13 @@
     ViewData["Title"] = "Edit";
 }
 
-<h2>Editing term @Model.Rate.Term with Id @Model.Rate.Id</h2> 
+<h2 id="title">Editing</h2>
+
+<script>
+    if (@Model.Rate.Id == 0) {
+        document.getElementById("title").innerHTML = "Add new";
+    }
+</script>
 
 <form method="post">
     <input type="hidden" asp-for="Rate.Id" />
