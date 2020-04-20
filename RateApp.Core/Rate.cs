@@ -11,7 +11,7 @@ namespace RateApp.Core
         [Key]
         public int Id { get; set; }
         [Required]
-        public System.Nullable<int> Term { get; set; }
+        public int? Term { get; set; }
         [Required]
         public decimal? OneTime{ get; set; }
         [Required]
