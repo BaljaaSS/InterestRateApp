@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Data.SqlTypes;
 using System.Text;
 
 namespace RateApp.Core
@@ -10,10 +11,10 @@ namespace RateApp.Core
         [Key]
         public int Id { get; set; }
         [Required]
-        public int Term { get; set; }
+        public System.Nullable<int> Term { get; set; }
         [Required]
-        public double OneTime{ get; set; }
+        public decimal? OneTime{ get; set; }
         [Required]
-        public double Monthly { get; set; }
+        public decimal? Monthly { get; set; }
     }
 }
