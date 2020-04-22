@@ -1,3 +1,3 @@
 # InterestRateApp
 
-This repo is for Interest Rate app. 
+This repo is for Interest Rate app (test). 
